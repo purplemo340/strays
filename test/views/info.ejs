@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../app.css" rel="stylesheet">
+    </head>
+    <body>
+            <h1>Stray Kids Info</h1>
+            <h1>Discography</h1>
+        
+            <canvas id="canvas"></canvas>
+            <div id="palette"></div>
+            <hr />
+            <div id="complementary"></div>
+            
+        
+        <h2>Albums</h2>
+       
+        
+            <% for(let i=0;i< locals.albums.length; i++){ %>
+               <div class="album_div"> <h2><a href="/album"></a></h2>
+                <form method="POST" action="/album">
+                    <input type= "hidden" name="album_id"  value=<%= locals.albums[i].id %>>
+                    <input type="hidden"  name="access_token"  value=<%= locals.access_token %>>
+                    <button class="album" type="submit"><%=albums[i].name%></button>
+                </form>
+                <img class="img" style="display: block; -webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="<%=albums[i].images[0].url%>" width="150" height="150">
+               </div>
+                <% } %>
+        
+                <script src="../image.js"></script>
+    
+               
+               
+          
+         
+        
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../app.css" rel="stylesheet">
+    </head>
+    <body>
+        
+        <canvas id="canvas"></canvas>
+        <div id="palette"></div>
+        <hr />
+        <div id="complementary"></div>
+            
+        
+        <img class= "album_img" style="display: block; -webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="<%=album.images[0].url%>" width="150" height="150">
+   
+        <h1 class="album_name"><%= album.name %></h1>
+        <h2>Release Date: <%=album.release_date%></h2>
+        <h2>Tracks</h2>
+        <% for(let i=0; i<album.tracks.items.length; i++){%>
+        <form method="POST" action="/track">
+            <input type= "hidden" name="track_id"  value=<%= locals.album.tracks.items[i].id %>>
+            <input type="hidden"  name="access_token"  value=<%= locals.access_token %>>
+            <button type="submit"><h3><%=album.tracks.items[i].name%></h3></button>
+        </form>
+        <% } %>
+        <script src="../image.js"></script>
+    </body>
+</html>

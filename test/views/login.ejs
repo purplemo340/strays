@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Hi</h1>
+        <h2 class="album_name">Name</h2>
+        <a href="/login">login</a>
+        <a href="/access">access</a>
+        <form action="/access" method="POST">
+            <input type="hidden" name='access_token' value=<%=locals.data %>>
+            <button type="submit">Albums</button>
+        </form>
+        <a href="/refresh_token">refresh</a>
+        <a href="test.ejs">test</a>
+        </body>
+        </html>
