@@ -312,6 +312,10 @@ app.get('/callback', function(req, res) {
     
 
   });
+  app.get('/', function(req, res){
+   
+    res.render("login.ejs")
+  });
   app.listen(port, () => {
     console.log(`Server running on port ${port}.`);
   });

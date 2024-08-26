@@ -1,6 +1,35 @@
-
+:root{
+  --bs-red:#A91D3A;
+  --bs-light-red: #C73659;
+  --bs-black:#151515;
+  --bs-grey:#EEEEEE;
+}
 body {
-    background: linear-gradient(300deg, black, #ff4c68, white);
+    background: linear-gradient(300deg, var(--bs-black), var(--bs-light-red), var(--bs-grey));
     background-size: 100% 500%;
     animation: gradient-animation 18s ease infinite;
+    text-align: center;
   }
+button{
+  margin: 5px;
+  background-color: var(--bs-grey);
+  color: var(--bs-black);
+  border-radius: 20px;
+  
+}
+button:hover{
+  background-color:var(--bs-light-red)
+}
+h1{
+  color: var(--bs-black);
+}
+
+img{
+  border-radius: 20px;
+}
+.album_div{
+  width: 30%;
+  margin: 10px;
+  float: left;
+}
+

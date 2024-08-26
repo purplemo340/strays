@@ -322,10 +322,12 @@ const main = (url) => {
       
       // Set the canvas size to be the same as of the uploaded image
       const canvas = document.getElementById("canvas");
+      console.log(canvas)
       canvas.width = image.width;
       canvas.height = image.height;
       const ctx = canvas.getContext("2d");
       ctx.drawImage(image, 0, 0);
+      console.log(canvas)
 
       /**
        * getImageData returns an array full of RGBA values
@@ -347,7 +349,7 @@ const main = (url) => {
      
       // Create the HTML structure to show the color palette
       buildPalette(quantColors);
-      
+      canvas.style.display='none'
     };
     image.src = fileReader.result;
   };

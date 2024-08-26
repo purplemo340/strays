@@ -6,14 +6,15 @@
   <link href="../app.css" rel="stylesheet">
     </head>
     <body>
-        <h1>Stray Kids</h1>
         
-        <button><a href="/login">login</a></button>
+        <img src="/static/stray-kids-removebg-preview.png">
+        <br>
+        <a href="/login"><button>Login</button></a>
         <form action="/access" method="POST">
             <input type="hidden" name='access_token' value=<%=locals.data %>>
             <button type="submit">Albums</button>
         </form>
-        <button><a href="/refresh_token">refresh</a></button>
+        <a href="/refresh_token"><button>Refresh</button></a>
         
         </body>
         </html>
