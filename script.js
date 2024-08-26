@@ -92,7 +92,8 @@ app.get('/callback', function(req, res) {
           });
           
           // we can also pass the token to the browser to make requests from there
-          res.redirect('/?' +
+          var host = 'https://strays.onrender.com'
+          res.redirect(host+'/?' +
             querystring.stringify({
               access_token: access_token,
               refresh_token: refresh_token
@@ -237,7 +238,7 @@ app.get('/callback', function(req, res) {
     });
  */
     console.log(req.body.access_token);
-
+    console.log(req.get('host'))
     res.render('index.ejs', {data:req.query.access_token})
   });
   app.post('/access', (req, res) =>{
