@@ -1,5 +1,5 @@
 var client_id = 'c00fff71c5114d1f929149df578e3cf8';
-var redirect_uri = 'http://localhost:3000/callback';
+var redirect_uri = 'https://strays.onrender.com/callback';
 var client_secret = '0780c7e25c364e8ab37209b0dfcbd86d'
 const id = '2dIgFjalVxs4ThymZ67YCE';
 const app = express();
@@ -13,8 +13,10 @@ import { dirname } from "path";
 import { fileURLToPath } from "url";
 import bodyParser from "body-parser";
 import { access } from "fs";
+
 var stateKey = 'spotify_auth_state';
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
 const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 const generateRandomString = (length) => {
@@ -313,10 +315,8 @@ app.get('/callback', function(req, res) {
     
 
   });
-  app.get('/', function(req, res){
-   
-    res.render("login.ejs")
-  });
+
   app.listen(port, () => {
     console.log(`Server running on port ${port}.`);
+    
   });
