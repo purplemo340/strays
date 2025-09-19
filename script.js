@@ -255,6 +255,7 @@ app.get('/callback', function(req, res) {
     const result_albums=request.get(options, function(error, response, body) {
       //console.log(body.items[0]);
       var albums=body.items;
+      //albums variable inputted into sql database
      // console.log(albums[0])
       res.render('info.ejs', {albums:albums, access_token:access_token});
     });
