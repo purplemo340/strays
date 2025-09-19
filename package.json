@@ -7,13 +7,12 @@
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
-    "googleapis": "^144.0.0",
     "nodemon": "^3.1.4",
     "os": "^0.1.2",
     "querystring": "^0.2.1",
     "request": "^2.88.2"
   },
-  "main": "script.js",
+  "main":"script.js",
   "scripts": {
     "start": "node script.js"
   },

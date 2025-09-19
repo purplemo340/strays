@@ -9,20 +9,12 @@
         
         <img src="/static/stray-kids-removebg-preview.png">
         <br>
-        <p>Click the login button below to login to spotify to log in to 
-            Spotify and get the access get the necessary access code from Spotify. 
-            Then click on the Albums button to see the discography. 
-            Stray Kids is a 8 member K-Pop boy group 
-            that was formed in 2019. 
-        </p>
         <a href="/login"><button>Login</button></a>
         <form action="/access" method="POST">
             <input type="hidden" name='access_token' value=<%=locals.data %>>
             <button type="submit">Albums</button>
         </form>
         <a href="/refresh_token"><button>Refresh</button></a>
-        <a href="/refresh_token"><button></button></a>
-        <a href="videos.html">Test</a>
         
         </body>
         </html>
